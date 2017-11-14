@@ -31,7 +31,10 @@ socket.on('resUsers', function (users) {
   }
   let otherPlayers = gameList.hasChildNodes()
   if(!otherPlayers){
-    gameList.innerHTML = 'Just you in the lobby right now'
+    var li = document.createElement("LI")
+    var text = document.createTextNode('Just you in the lobby right now...')
+    li.appendChild(text)
+    gameList.appendChild(li) 
   }
 })
 socket.on('message', function (message) {

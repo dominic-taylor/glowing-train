@@ -1,4 +1,4 @@
-# glowing-train
+# pong
 realtime multiplayer game over sockets
 
 
