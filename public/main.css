@@ -19,6 +19,12 @@ ul, li {
 .lobby{
   margin-top: 5%;
 }
+.pinned{
+  border-bottom: 1px solid gray;
+}
+.important {
+  color: red;
+}
 #nameInput{
   width: 160px;
   height: 30px;
