@@ -145,16 +145,28 @@ function gameRoutine(board, gameData) {
     
     socket.emit('endGame', {winText: winner+ '  WON THE GAME', game: socket.game.id})
     clearInterval(timerId)  
-    setExitToLobby() // ask if play again 
+    setEndOfGame() // ask if play again 
   }
 
-  function setExitToLobby() {
+  function setEndOfGame() {
     let gameOver = document.createElement('button')  
+    let replayButton = document.createElement('button')  
+
     gameOver.classList.add('in-game')
     gameOver.innerHTML = 'Exit to Lobby'
     gameOver.addEventListener('click', function () {
       window.location.reload()
     })
+
+    replayButton.innerHTML = "Replay?"
+
+    replayButton.addEventListener('click', function(){
+      // console.log("Make player1 and player2 inGame = false and send paket to ")
+   
+    })
+    // document.getElementById('lobby').appendChild(replayButton)
+
+
     document.getElementById('lobby').appendChild(gameOver)
   }
 
